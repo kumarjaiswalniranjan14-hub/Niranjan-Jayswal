@@ -1,0 +1,516 @@
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Niranjan| Portfolio</title>
+
+    <!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">.
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        /* =========================
+           BASIC CSS
+        ========================= */
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:Arial, sans-serif;
+            color:#ffffff;
+            background:#f4f7fb;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        nav{
+            width:100%;
+            height:70px;
+            background:#061b49;
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            padding:0 8%;
+            position:fixed;
+            top:0;
+            z-index:10;
+        }      
+        nav ul{
+            display:flex;
+            list-style:none;
+            gap:30px;
+        }
+
+        nav ul li a{
+            color:white;
+            text-decoration:none;
+            font-size:16px;
+        }
+
+        nav ul li a:hover{
+            color:#38bdf8;
+        }
+
+
+        /* =========================
+           HOME SECTION
+        ========================= */
+
+        .home{
+            min-height:100vh;
+            padding:120px 8% 60px;
+
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+
+            background-image:
+            linear-gradient(
+                rgba(3,15,40,0.82),
+                rgba(3,15,40,0.88)
+            ),
+            url("images/ai-background.jpg");
+
+            background-size:cover;
+            background-position:center;
+            overflow:hidden;
+        }
+
+
+        /* LEFT SIDE */
+
+        .home-content{
+            width:55%;
+        }
+
+        .home-content h3{
+            font-size:24px;
+            color:#38bdf8;
+            margin-bottom:12px;
+        }
+
+        .home-content h1{
+            font-size:55px;
+            color:#ffffff;
+            margin-bottom:15px;
+        }
+
+        .home-content h1 span{
+            color:#38bdf8;
+        }
+
+        .home-content h2{
+            font-size:28px;
+            color:#ffffff;
+            margin-bottom:20px;
+        }
+
+        .home-content p{
+            font-size:17px;
+            line-height:1.7;
+            color:#dbeafe;
+            max-width:600px;
+        }
+
+
+        /* PROFILE PHOTO */
+
+        .profile{
+            width:40%;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+
+        .profile img{
+            width:300px;
+            height:300px;
+            object-fit:cover;
+
+            border-radius:50%;
+
+            border:7px solid #38bdf8;
+
+            box-shadow:
+            0 0 25px #38bdf8,
+            0 0 50px rgba(56,189,248,0.4);
+        }
+
+
+        /* =========================
+           ABOUT SECTION
+        ========================= */
+
+        .about{
+            padding:80px 8%;
+            background:white;
+            color:#061b49;
+            text-align:center;
+        }
+
+        .section-title{
+            font-size:38px;
+            margin-bottom:25px;
+            color:#061b49;
+        }
+
+        .section-title span{
+            color:#0284c7;
+        }
+
+        .about p{
+            max-width:800px;
+            margin:auto;
+            font-size:17px;
+            line-height:1.8;
+        }
+
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skills{
+            padding:80px 8%;
+            background:#eef5ff;
+            color:#061b49;
+            text-align:center;
+        }
+
+        .skill-container{
+            margin-top:35px;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            flex-wrap:wrap;
+            gap:20px;
+        }
+
+        .skill{
+            width:180px;
+            min-height:130px;
+
+            background:white;
+
+            border:2px solid #dbeafe;
+            border-radius:15px;
+
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+
+            box-shadow:0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .skill i{
+            font-size:38px;
+            color:#0284c7;
+            margin-bottom:12px;
+        }
+
+        .skill h3{
+            font-size:18px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer{
+            background:#061b49;
+            color:white;
+            text-align:center;
+            padding:40px 8%;
+        }
+
+        footer h2{
+            margin-bottom:15px;
+        }
+
+        footer p{
+            color:#cbd5e1;
+            margin-bottom:20px;
+        }
+
+        .social-icons{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            gap:20px;
+        }
+
+        .social-icons a{
+            width:45px;
+            height:45px;
+
+            border:2px solid #38bdf8;
+            border-radius:50%;
+
+            display:flex;
+            align-items:center;
+            justify-content:center;
+
+            color:white;
+            text-decoration:none;
+
+            font-size:20px;
+        }
+
+        .social-icons a:hover{
+            background:#38bdf8;
+            color:#061b49;
+        }
+
+        .copyright{
+            margin-top:25px;
+            font-size:14px;
+            color:#94a3b8;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media(max-width:768px){
+
+            nav{
+                height:auto;
+                padding:15px 5%;
+                flex-direction:column;
+                gap:15px;
+            }
+
+            nav ul{
+                gap:15px;
+                flex-wrap:wrap;
+                justify-content:center;
+            }
+
+            .home{
+                padding-top:170px;
+                flex-direction:column-reverse;
+                text-align:center;
+                gap:40px;
+            }
+
+            .home-content{
+                width:100%;
+            }
+
+            .profile{
+                width:100%;
+            }
+
+            .profile img{
+                width:220px;
+                height:220px;
+            }
+
+            .home-content h1{
+                font-size:38px;
+            }
+
+            .home-content h2{
+                font-size:22px;
+            }
+
+            .home-content p{
+                font-size:15px;
+            }
+        }
+.logo{
+font-size:30px;
+}
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <nav>
+
+        <div class="logo">
+        <a href="Signup.html">
+    <i class="fa-solid fa-circle-user profile"></i></a><span>.</span>
+        </div>
+
+        <ul>
+           
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#contact">Connect me</a></li>
+        </ul>
+
+    </nav>
+
+
+
+    <!-- =========================
+         HOME
+    ========================== -->
+
+    <section class="home" id="home">
+
+        <div class="home-content">
+
+            <h3>Hello, I'm</h3>
+
+            <h1>
+                Niranjan<span>Jaiswal</span>
+            </h1>
+
+            <h2>
+                Future Software developer  and AI engineer    </h2>
+
+            <p>
+                I am a Class 11 Computer Engineering student
+                passionate about technology, web development,
+                artifical intelligence for the future.
+            </p>
+
+        </div>
+
+
+        <div class="profile">
+
+       
+            <img src="MY PIC.jpg" alt="Abc">
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section class="about" id="about">
+
+        <h2 class="section-title">
+            About <span>Me</span>
+        </h2>
+
+        <p>
+            My name is Niranjan Jaiswal. I am a Class 11
+            Computer Engineering student who loves learning
+            new technologies. I am interested in web development,
+            software development and artificial intelligence.
+            I continuously practice coding and try to improve
+            my technical skills.
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================
+         SKILLS
+    ========================== -->
+
+    <section class="skills" id="skills">
+
+        <h2 class="section-title">
+            My <span>Skills</span>
+        </h2>
+
+        <div class="skill-container">
+
+            <div class="skill">
+                <i class="fa-solid fa-palette"></i>
+                <h3>Graphic Design</h3>
+            </div>
+
+            <div class="skill">
+                <i class="fa-solid fa-video"></i>
+                <h3>Video Editing</h3>
+            </div>
+
+            <div class="skill">
+                <i class="fa-brands fa-html5"></i>
+                <h3>HTML</h3>
+            </div>
+
+            <div class="skill">
+                <i class="fa-brands fa-css3-alt"></i>
+                <h3>CSS</h3>
+            </div>
+
+            <div class="skill">
+                <i class="fa-brands fa-java"></i>
+                <h3>Java</h3>
+            </div>
+
+            <div class="skill">
+                <i class="fa-brands fa-art"></i>
+                <h3>Art</h3>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer id="contact">
+
+        <h2>Niranjan Jaiswal</h2>
+
+        <p>
+            Connect with me
+        </p>
+
+        <div class="social-icons">
+
+            <a href="">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="https://www.whatsapp.com">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+
+            <a href="https://www.tiktok.com">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+
+            <a href="mailto:niranjan@example.com">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 Niranjan Jaiswal . All Rights Reserved.
+        </div>
+
+    </footer>
+
+
+</body>
+</html>

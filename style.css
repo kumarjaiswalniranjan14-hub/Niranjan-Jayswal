@@ -1,0 +1,145 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #050816, #101b3d, #241044);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.container {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    width: 400px;
+    padding: 35px;
+    background-color: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.4);
+}
+
+.logo {
+    width: 65px;
+    height: 65px;
+    background: linear-gradient(45deg, #713cff, #00c6ff);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 28px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #bbb;
+    margin: 10px 0 25px;
+}
+
+.input-box {
+    margin-bottom: 20px;
+}
+
+.input-box label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #555;
+    border-radius: 8px;
+    background-color: rgba(255,255,255,0.08);
+    color: white;
+    outline: none;
+}
+
+.input-box input:focus {
+    border-color: #8b5cf6;
+}
+
+.input-box input::placeholder {
+    color: #aaa;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-bottom: 22px;
+    gap: 8px;
+}
+
+.options a,
+.signup a {
+    color: #8e7aff;
+    text-decoration: none;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #713cff, #00aaff);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+#message {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.signup {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+.footer {
+    text-align: center;
+    color: #999;
+    font-size: 11px;
+    margin-top: 30px;
+}
+
+@media(max-width: 450px) {
+    .login-box {
+        width: 100%;
+        padding: 25px 20px;
+    }
+
+    .options {
+        flex-wrap: wrap;
+    }
+}
